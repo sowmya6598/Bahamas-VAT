@@ -86,35 +86,3 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-//    private GestureDetectorCompat gestureObject;
-//
-//
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        this.gestureObject.onTouchEvent(event);
-//        return super.onTouchEvent(event);
-//    }
-//
-//    class LearnGesture extends GestureDetector.SimpleOnGestureListener {
-//
-//        @Override
-//        public boolean onFling(MotionEvent event1, MotionEvent event2,
-//                               float velocityX, float velocityY) {
-//
-//            if (event2.getX() < event1.getX()) {
-//
-//                Intent intent = new Intent(
-//                        MainActivity.this, SecondActivity.class);
-//                finish();
-//                startActivity(intent);
-//            }
-//            else if (event2.getX() > event1.getX()) {
-//
-//            }
-//            return true;
-//
-//        }
-//
-//    }
-}
