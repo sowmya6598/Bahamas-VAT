@@ -1,5 +1,6 @@
 package com.example.sthottam.bahamianvat;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,17 +26,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Results = (TextView)findViewById(R.id.Results);
+        Results = findViewById(R.id.Results);
 
-        Price = (EditText)findViewById(R.id.Price);
+        Price = findViewById(R.id.Price);
 
-        AddButton = (Button)findViewById(R.id.AddButton);
-        SubtractButton = (Button)findViewById(R.id.SubtractButton);
+        AddButton = findViewById(R.id.AddButton);
+        SubtractButton = findViewById(R.id.SubtractButton);
 
-//        gestureObject = new GestureDetectorCompat(this, new LearnGesture());
 
 
         AddButton.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -47,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
                     result = Double.parseDouble(df.format(price + 0.01));
                 }
                 else {
-                    result = Double.parseDouble(df.format(price * 1.075));
+                    result = Double.parseDouble(df.format(price * 1.12));
                 }
 
                 vat = Double.parseDouble(df.format(result - price));
                 Results.setText(
-                        "Excluding VAT " + "$" + price + "\n" +
-                                "VAT (7.5% )" + "$" + vat + "\n" +
+                                "Excluding VAT " + "$" + price + "\n" +
+                                "VAT (12% )" + "$" + vat + "\n" +
                                 "Including VAT " + "$" + String.valueOf(result)
                 );
 
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         SubtractButton.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -72,17 +76,27 @@ public class MainActivity extends AppCompatActivity {
                     result = Double.parseDouble(df.format(price - 0.01));
                 }
                 else {
-                    result = Double.parseDouble((df.format(price / 1.075)));
+                    result = Double.parseDouble((df.format(price / 1.12)));
                 }
 
                 vat = Double.parseDouble(df.format(price - result));
                 Results.setText(
-                        "Including VAT " + "$" + price + "\n" +
-                                "VAT (7.5%) " + "$" + vat + "\n" +
+                                "Including VAT " + "$" + price + "\n" +
+                                "VAT (12%) " + "$" + vat + "\n" +
                                 "Excluding VAT " + "$" + String.valueOf(result)
                 );
             }
         });
 
+        Price.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                TextView myTextView = findViewById(R.id.Results);
+                myTextView.setText("");
+            }
+        });
+
 
     }
+}

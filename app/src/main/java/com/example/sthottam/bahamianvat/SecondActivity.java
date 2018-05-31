@@ -3,7 +3,6 @@ package com.example.sthottam.bahamianvat;
 import android.os.Bundle;
         import android.support.v4.app.Fragment;
         import android.support.v7.app.AppCompatActivity;
-        import android.text.Html;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -11,29 +10,25 @@ import android.os.Bundle;
         import android.widget.TextView;
         import android.widget.Toast;
 
-//import com.inducesmile.completecalculatorapp.helpers.Helper;
-//import com.inducesmile.completecalculatorapp.ultility.Calculator;
-
-        import java.util.ArrayList;
-        import java.util.Iterator;
-        import java.util.function.Function;
-
+//import com.example.sthottam.completecalculatorapp.helpers.Helper;
+//import com.example.sthottam.completecalculatorapp.ultility.Calculator;
 
 public class SecondActivity extends Fragment implements View.OnClickListener {
     private Button one, two, three, four, five, six, seven, eight, nine, zero;
-    private Button plus, subtract, divide, multiply, plusMinus;
+    private Button plus, subtract, divide, multiply;
     private Button ac, percent, dot, double_zero, equal;
     private String currentDisplayedInput = "";
     private String inputToBeParsed = "";
     private TextView outputResult;
     private Calculator mCalculator;
-    public SimpleCalculatorFragment() {
+    public SecondActivity() {
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_simple_calculator, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-        outputResult = view.findViewById(R.id.display);
+        outputResult = view.findViewById(R.id.result);
         outputResult.setText("");
         mCalculator = new Calculator();
         one = view.findViewById(R.id.one);
@@ -50,11 +45,11 @@ public class SecondActivity extends Fragment implements View.OnClickListener {
         subtract = view.findViewById(R.id.minus);
         divide = view.findViewById(R.id.divide);
         multiply = view.findViewById(R.id.multiply);
-        plusMinus = view.findViewById(R.id.plus_minus);
+        //plusMinus = view.findViewById(R.id.plus_minus);
         ac = view.findViewById(R.id.ac);
         percent = view.findViewById(R.id.percent);
         dot = view.findViewById(R.id.dot);
-        double_zero = view.findViewById(R.id.double_zero);
+        //double_zero = view.findViewById(R.id.double_zero);
         equal = view.findViewById(R.id.equal);
         one.setOnClickListener(this);
         two.setOnClickListener(this);
@@ -70,7 +65,6 @@ public class SecondActivity extends Fragment implements View.OnClickListener {
         subtract.setOnClickListener(this);
         divide.setOnClickListener(this);
         multiply.setOnClickListener(this);
-        plusMinus.setOnClickListener(this);
         ac.setOnClickListener(this);
         percent.setOnClickListener(this);
         dot.setOnClickListener(this);
@@ -186,9 +180,5 @@ public class SecondActivity extends Fragment implements View.OnClickListener {
         }
         return formattingInput;
     }
-
-
-
-
 
 }

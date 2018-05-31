@@ -14,7 +14,7 @@
         android:layout_weight="2.1"
         android:gravity="end|bottom"
         android:maxLines="1"
-/>
+        />
 
     <TextView
         android:id="@+id/result"
@@ -53,11 +53,11 @@
             android:text="√"/>
 
         <Button
-            android:id="@+id/ac"
+            android:id="@+id/btn_clear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="C" />
+            android:text="C"/>
 
         <Button
             android:id="@+id/btn_reset"
@@ -75,32 +75,32 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/seven"
+            android:id="@+id/btn_7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="7" />
+            android:text="7"/>
 
         <Button
-            android:id="@+id/eight"
+            android:id="@+id/btn_8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="8" />
+            android:text="8"/>
 
         <Button
-            android:id="@+id/nine"
+            android:id="@+id/btn_9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="9" />
+            android:text="9"/>
 
         <Button
-            android:id="@+id/divide"
+            android:id="@+id/btn_divide"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="÷" />
+            android:text="÷"/>
     </LinearLayout>
 
     <LinearLayout
@@ -110,7 +110,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/four"
+            android:id="@+id/btn_4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -118,18 +118,18 @@
             tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/five"
+            android:id="@+id/btn_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="5" />
+            android:text="5"/>
 
         <Button
-            android:id="@+id/six"
+            android:id="@+id/btn_6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="6" />
+            android:text="6"/>
 
         <Button
             android:id="@+id/btn_multiply"
@@ -146,7 +146,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/one"
+            android:id="@+id/btn_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -154,25 +154,25 @@
             tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/two"
+            android:id="@+id/btn_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="2"/>
 
         <Button
-            android:id="@+id/three"
+            android:id="@+id/btn_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3"/>
 
         <Button
-            android:id="@+id/minus"
+            android:id="@+id/btn_minus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="-"/>
     </LinearLayout>
 
     <LinearLayout
@@ -182,32 +182,32 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/zero"
+            android:id="@+id/btn_0"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="0" />
+            android:text="0"/>
 
         <Button
-            android:id="@+id/dot"
+            android:id="@+id/btn_decimal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="." />
+            android:text="."/>
 
         <Button
-            android:id="@+id/equal"
+            android:id="@+id/btn_equals"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="=" />
+            android:text="="/>
 
         <Button
-            android:id="@+id/plus"
+            android:id="@+id/btn_plus"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="+" />
+            android:text="+"/>
     </LinearLayout>
 </LinearLayout>
 

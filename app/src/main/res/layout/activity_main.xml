@@ -27,15 +27,12 @@
         android:id="@+id/AddButton"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:layout_alignTop="@+id/SubtractButton"
+        android:layout_toLeftOf="@+id/SubtractButton"
         android:text="Add VAT"
-        tools:layout_editor_absoluteY="253dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/SubtractButton"
-        android:layout_alignBottom="@+id/SubtractButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"/>
+        tools:layout_editor_absoluteY="253dp" />
 
     <Button
         android:id="@+id/SubtractButton"
@@ -44,7 +41,7 @@
         android:text="Subtract VAT"
         tools:layout_editor_absoluteY="253dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="40dp"
         android:layout_above="@+id/Results"
         android:layout_alignRight="@+id/Results"
         android:layout_alignEnd="@+id/Results"/>
@@ -52,21 +49,13 @@
     <TextView
         android:id="@+id/Results"
         android:layout_width="300dp"
-        android:layout_height="170dp"
+        android:layout_height="150dp"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="364dp"
-        android:layout_marginBottom="79dp"
+        android:layout_marginBottom="50dp"
         android:lines="3"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
-
-    <ImageButton
-        android:id="@+id/info"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignTop="@+id/Price"
-        android:layout_alignRight="@+id/Price"
-        app:srcCompat="@android:drawable/ic_menu_info_details"/>
 
 </RelativeLayout>
