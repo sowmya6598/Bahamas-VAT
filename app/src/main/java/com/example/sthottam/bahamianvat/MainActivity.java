@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
                 vat = Double.parseDouble(df.format(result - price));
                 Results.setText(
-                                "Excluding VAT " + "$" + price + "\n" +
+                        "Excluding VAT " + "$" + price + "\n" +
                                 "VAT (12% )" + "$" + vat + "\n" +
                                 "Including VAT " + "$" + String.valueOf(result)
                 );
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
                 vat = Double.parseDouble(df.format(price - result));
                 Results.setText(
-                                "Including VAT " + "$" + price + "\n" +
+                        "Including VAT " + "$" + price + "\n" +
                                 "VAT (12%) " + "$" + vat + "\n" +
                                 "Excluding VAT " + "$" + String.valueOf(result)
                 );
@@ -96,6 +96,18 @@ public class MainActivity extends AppCompatActivity {
                 myTextView.setText("");
             }
         });
+
+//        EditText editText = findViewById(R.id.Price);
+//
+//        editText.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+//            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                if (actionId == EditorInfo.IME_ACTION_DONE) {
+//                    AddButton.performClick();
+//                    return true;
+//                }
+//                return false;
+//            }
+//        });
 
 
     }
